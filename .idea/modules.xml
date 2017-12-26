@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mvcpay.iml" filepath="$PROJECT_DIR$/.idea/modules/mvcpay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mvcpay_main.iml" filepath="$PROJECT_DIR$/.idea/modules/mvcpay_main.iml" group="mvcpay" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mvcpay_test.iml" filepath="$PROJECT_DIR$/.idea/modules/mvcpay_test.iml" group="mvcpay" />
+    </modules>
+  </component>
+</project>
