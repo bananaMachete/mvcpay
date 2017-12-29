@@ -32,8 +32,8 @@ public class XaRestServiceImpl implements XaRestService {
             jsonres.put(MessageErrorCode.RESPONSE_MESSAGE_ERROE, MessageErrorCode.POST_MESSAGE_NULLL_ERROR);
             return jsonres.toString();
         }
-        // 向西银惠付发送消息
-        String url = PropsUtil.getProperty(methodname);
+        // 向西银惠付发送消息PropsUtil.getProperty(methodname);
+        String url = "http://weixintest.xacbank.com.cn:9998/api/OpenPlatForm/scanNative";
         System.out.println("SEND URL: " + url);
         if (FormatUtils.stringIsNull(url)) {
             System.out.println(MessageErrorCode.POST_MESSAGE_URL_ERROR);
