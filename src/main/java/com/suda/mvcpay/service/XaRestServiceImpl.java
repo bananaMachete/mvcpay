@@ -1,19 +1,17 @@
 package com.suda.mvcpay.service;
 
-import com.alibaba.fastjson.JSONException;
 import com.alibaba.fastjson.JSONObject;
 import com.suda.mvcpay.utils.FormatUtils;
 import com.suda.mvcpay.utils.HttpNetProvider;
 import com.suda.mvcpay.utils.MessageErrorCode;
+import com.suda.mvcpay.utils.PropsUtil;
 import org.springframework.stereotype.Service;
-
 import java.io.UnsupportedEncodingException;
-import java.util.LinkedHashMap;
-import java.util.Map;
+
 /**
  * @author tim
  * @date 2017-12-20
- * @ps 向西银请求数据
+ * @ps 请求数据
  */
 @Service
 public class XaRestServiceImpl implements XaRestService {
@@ -35,8 +33,7 @@ public class XaRestServiceImpl implements XaRestService {
             return jsonres.toString();
         }
         // 向西银惠付发送消息
-        //String url = PropsUtil.getProperty(methodname);
-        String url = "http://weixintest.xacbank.com.cn:9998/api/OpenPlatForm/scanNative";
+        String url = PropsUtil.getProperty(methodname);
         System.out.println("SEND URL: " + url);
         if (FormatUtils.stringIsNull(url)) {
             System.out.println(MessageErrorCode.POST_MESSAGE_URL_ERROR);
